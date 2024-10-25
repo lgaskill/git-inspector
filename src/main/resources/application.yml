@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: Git Inspector
+
+springdoc:
+  swagger-ui:
+    path: /api-docs
+
+# Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+github:
+  baseUrl: ${BASE_URL:https://api.github.com}
+  apiVersion: ${API_VERSION:2022-11-28}
+  clientToken: ${CLIENT_TOKEN:}
